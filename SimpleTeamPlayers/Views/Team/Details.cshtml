@@ -8,7 +8,7 @@
 
 <div>
     <h4>Team</h4>
-	<hr />
+    <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)
@@ -36,7 +36,54 @@
 
     </dl>
 </div>
+
+<a href="#" id="button" class="ui-state-default ui-corner-all">Pokaż Graczy</a>
+
+<script>
+    $(function () {
+        // run the currently selected effect
+        function runEffect() {
+            // get effect type from
+            $('#effect').toggle("blind");
+
+            // run the effect
+            $("#effect").show();
+        };
+
+        // set effect from select menu value
+        $("#button").click(function () {
+            runEffect();
+            return false;
+        });
+
+        $("#effect").hide();
+    });
+</script>
+
+
+
+<div class="toggler">
+    <div id="effect" class="ui-widget-content ui-corner-all" style="display: none;">
+        <h3 class="ui-widget-header ui-corner-all">Gracze:</h3>
+
+        @foreach (var item in Model.Players)
+        {
+            <div class="ViewPlayersInDetails">
+                @if (item != null)
+                {
+                    @Html.DisplayFor(model => item.Name)
+                }
+
+            </div>
+        }
+
+    </div>
+</div>
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.TeamId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+
+
