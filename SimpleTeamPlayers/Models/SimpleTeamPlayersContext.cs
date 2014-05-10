@@ -23,6 +23,8 @@ namespace SimpleTeamPlayers.Models
         public System.Data.Entity.DbSet<SimpleTeamPlayers.Models.Team> Teams { get; set; }
 
         public System.Data.Entity.DbSet<SimpleTeamPlayers.Models.Player> Players { get; set; }
+
+        public System.Data.Entity.DbSet<SimpleTeamPlayers.Models.Image> Images { get; set; }
     
     }
 }

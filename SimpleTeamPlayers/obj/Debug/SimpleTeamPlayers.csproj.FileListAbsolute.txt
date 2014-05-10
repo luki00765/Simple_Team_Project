@@ -70,3 +70,6 @@ c:\users\lukii\documents\visual studio 2013\Projects\SimpleTeamPlayers\SimpleTea
 c:\users\lukii\documents\visual studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.csprojResolveAssemblyReference.cache
 c:\users\lukii\documents\visual studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.dll
 c:\users\lukii\documents\visual studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.pdb
+C:\Users\Lukii\Documents\Visual Studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.Migrations.InitialCreate.resources
+C:\Users\Lukii\Documents\Visual Studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.csproj.GenerateResource.Cache
+C:\Users\Lukii\Documents\Visual Studio 2013\Projects\SimpleTeamPlayers\SimpleTeamPlayers\obj\Debug\SimpleTeamPlayers.Migrations.AddImage.resources
