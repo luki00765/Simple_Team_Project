@@ -6,37 +6,39 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Image</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FileName)
-        </dt>
+<div class="container" style="display:block;">
+    <img src="@Url.Action("Show","Image", new { imageName = Model.FileName })" class="img-rounded col-md-4 Details_Show"  />
 
+    <dl class="dl-horizontal col-md-8">
+        <dt>
+            <i class="glyphicon glyphicon-bookmark"></i> @Html.DisplayNameFor(model => model.FileName)
+        </dt>
         <dd>
-            @Html.DisplayFor(model => model.FileName)
+            @Model.FileName
+        </dd>
+        <dt>
+            <i class="glyphicon glyphicon-picture"></i> @Html.DisplayNameFor(model => model.Extensions)
+        </dt>
+        <dd>
+            @Model.Extensions
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Data)
-        </dt>
+            <dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Data)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Extensions)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Extensions)
-        </dd>
-
+                <a type="button" class="btn btn-warning" href="@Url.Action("Edit/"+@Model.ID, "Image")">
+                    <i class="glyphicon glyphicon-edit"></i> Edytuj
+                </a>
+            </dt>
+            <dd>
+                <a type="button" class="btn btn-danger" href="@Url.Action("Delete/"+@Model.ID, "Image")">
+                    <i class="glyphicon glyphicon-trash"></i> Usuń
+                </a>
+            </dd>
+            <dt>
+                <br />
+                    <a type="button" class="btn btn-default" href="@Url.Action("Index", "Image")">
+                        <i class="glyphicon glyphicon-arrow-left"></i> Wróć do listy
+                    </a>
+            </dt>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

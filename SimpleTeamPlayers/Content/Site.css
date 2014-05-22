@@ -67,3 +67,11 @@ input[type="checkbox"].input-validation-error {
 .ViewPlayersInDetails {
     text-align: center;
 }
+
+.Index_Show {
+    width: 150px;
+}
+
+.Details_Show {
+    width: 150px;
+}

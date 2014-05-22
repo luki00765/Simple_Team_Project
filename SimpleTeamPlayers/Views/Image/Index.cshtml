@@ -7,39 +7,18 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a type="button" class="btn btn-success" href="@Url.Action("Create", "Image")">
+        <i class="glyphicon glyphicon-plus"></i> Dodaj zdjęcie
+    </a>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FileName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Data)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Extensions)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Data)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Extensions)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="row">
+    @foreach(var image in Model)
+    {
+        <div class="col-sm-6 col-md-2">
+            <a href="@Url.Action("Details", "Image", new { id = image.ID})" class="thumbnail">
+                <img src="@Url.Action("Show","Image", new { imageName = image.FileName })" class="img-rounded Index_Show" />
+            </a>
+        </div>
+    }
+</div>
